@@ -2,15 +2,25 @@ var http = require('http');
 var request = require('request');
 var async = require('async');
 
+var deezerUrl = 'http://api.deezer.com/';
+
 module.exports = {
 
   album: function(albumId, callback) {
+    this.requestData('album/' + albumId, callback);
+  },
+
+  artist: function(artistId, callback) {
+    this.requestData('artist/' + artistId, callback);
+  },
+
+  requestData: function(uri, callback) {
 
     async.waterfall([
 
       function(callback){
 
-        request('http://api.deezer.com/album/' + albumId, function(error, response, body) {
+        request(deezerUrl + uri, function(error, response, body) {
           callback(null, JSON.parse(body));
         });
 
@@ -19,6 +29,7 @@ module.exports = {
     ], function (err, result) {
       callback(result);
     });
+
 
   }
 
