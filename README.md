@@ -4,6 +4,10 @@ node-deezer-api-client
 Node js wrapper for deezer api - http://developers.deezer.com/api/ supports
 all GET methods which don't need OAuth authentication
 
+### Usage
+
+npm install node-deezer-api-client
+
 ### Artist examples
 
 ```javascript
@@ -25,4 +29,4 @@ deezer.artistAlbums(daftPunkArtistId, function(albums) {
 // get Daft Punk fans - http://api.deezer.com/artist/27/fans
 deezer.artistFans(daftPunkArtistId, function(fans) {
   console.log(fans.data);
-}); 
+});
