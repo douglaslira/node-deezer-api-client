@@ -50,6 +50,10 @@ module.exports = {
     this.requestData('artist/' + artistId + "/radio", callback);
   },
 
+  track: function(trackId, callback) {
+    this.requestData('track/' + trackId, callback);
+  },
+
   requestData: function(uri, callback) {
 
     async.waterfall([

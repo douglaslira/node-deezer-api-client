@@ -83,4 +83,11 @@ describe('#album', function() {
     });
   });
 
+  it('should return a track information for required track id', function(done) {
+    deezer.track(3135556, function(response) {
+      response.title.should.equal('Harder Better Faster Stronger');
+      done();
+    });
+  });
+
 });
