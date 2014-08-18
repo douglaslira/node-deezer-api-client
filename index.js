@@ -10,6 +10,10 @@ module.exports = {
     this.requestData('album/' + albumId, callback);
   },
 
+  albumComments: function(albumId, callback) {
+    this.requestData('album/' + albumId + "/comments", callback);
+  },
+
   artist: function(artistId, callback) {
     this.requestData('artist/' + artistId, callback);
   },

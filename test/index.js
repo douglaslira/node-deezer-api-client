@@ -12,6 +12,13 @@ describe('#album', function() {
     });
   });
 
+  it('should returns comments for required album id', function(done) {
+    deezer.albumComments(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
   it('should returns artist information for required artist id', function(done) {
     deezer.artist(1, function(response) {
       response.id.should.equal(1);
