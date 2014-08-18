@@ -19,10 +19,66 @@ describe('#album', function() {
     });
   });
 
+  it('should returns fans for required album id', function(done) {
+    deezer.albumFans(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns tracks for required album id', function(done) {
+    deezer.albumTracks(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
   it('should returns artist information for required artist id', function(done) {
     deezer.artist(1, function(response) {
       response.id.should.equal(1);
       response.name.should.equal('The Beatles');
+      done();
+    });
+  });
+
+  it('should returns the top 5 tracks of an artist id', function(done) {
+    deezer.artistTop(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns a list of artist albums', function(done) {
+    deezer.artistAlbums(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns a list of artist comments', function(done) {
+    deezer.artistComments(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns a list of artist fans', function(done) {
+    deezer.artistFans(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns a list of artist related', function(done) {
+    deezer.artistRelated(1, function(response) {
+      response.data.should.exist;
+      done();
+    });
+  });
+
+  it('should returns a list of artist radio', function(done) {
+    deezer.artistRadio(1, function(response) {
+      response.data.should.exist;
       done();
     });
   });

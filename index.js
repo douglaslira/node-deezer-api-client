@@ -14,8 +14,40 @@ module.exports = {
     this.requestData('album/' + albumId + "/comments", callback);
   },
 
+  albumFans: function(albumId, callback) {
+    this.requestData('album/' + albumId + "/fans", callback);
+  },
+
+  albumTracks: function(albumId, callback) {
+    this.requestData('album/' + albumId + "/fans", callback);
+  },
+
   artist: function(artistId, callback) {
     this.requestData('artist/' + artistId, callback);
+  },
+
+  artistTop: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/top", callback);
+  },
+
+  artistAlbums: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/albums", callback);
+  },
+
+  artistComments: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/comments", callback);
+  },
+
+  artistFans: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/fans", callback);
+  },
+
+  artistRelated: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/related", callback);
+  },
+
+  artistRadio: function(artistId, callback) {
+    this.requestData('artist/' + artistId + "/radio", callback);
   },
 
   requestData: function(uri, callback) {
