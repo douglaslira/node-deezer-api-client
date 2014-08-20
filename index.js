@@ -72,8 +72,8 @@ module.exports = {
 
       }
 
-    ], function (err, result) {
-      callback(result);
+    ], function (error, result) {
+      callback(error, result);
     });
 
 
