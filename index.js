@@ -61,7 +61,13 @@ module.exports = {
       function(callback){
 
         request(deezerUrl + uri, function(error, response, body) {
-          callback(null, JSON.parse(body));
+
+          if (error) {
+            return callback(error);
+          } else {
+            callback(null, JSON.parse(body));
+          }
+
         });
 
       }

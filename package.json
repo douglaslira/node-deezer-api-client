@@ -1,6 +1,6 @@
 {
   "name": "node-deezer-api-client",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "Node.js client for Deezer api",
   "main": "index.js",
   "scripts": {
